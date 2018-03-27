@@ -139,37 +139,23 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p><div id="container"></div></p>
-<p><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"></p>
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
-<!-- <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script> -->
+                <div id="container"></div>
+
+
+
+<p><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"></p>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
-    var page_id = location.href
-    var owner = 'katrina2816'
-    var repo = 'katrina2816.github.io'
-    var client_id = 'b61792f9ff489c3df398'
-    var client_secret: 'cff72a0e6f91713ef56785357585a0c3d83e561c'
-    var gitment = new Gitment({
-      // id: '页面 ID', // 可选。默认为 location.href
-      owner: 'katrina2816',
+    const gitalk = new Gitalk({
+      clientID: 'b61792f9ff489c3df398',
+      clientSecret: 'cff72a0e6f91713ef56785357585a0c3d83e561c',
       repo: 'katrina2816.github.io',
-      oauth: {
-        client_id: 'b61792f9ff489c3df398',
-        client_secret: 'cff72a0e6f91713ef56785357585a0c3d83e561c',
-      },
+      owner: 'katrina2816',
+      // admin: ['Github repo owner and collaborators, only these guys can initialize github issues'],
+      id: location.href,      // Ensure uniqueness and length less than 50
+      distractionFreeMode: false  // Facebook-like distraction free mode
     })
-    gitment.render('container')
-    // const gitalk = new Gitalk({
-    //   clientID: client_id,
-    //   clientSecret: client_secret,
-    //   repo: repo,
-    //   owner: owner,
-    //   // admin: ['Github repo owner and collaborators, only these guys can initialize github issues'],
-    //   id: page_id,      // Ensure uniqueness and length less than 50
-    //   distractionFreeMode: false  // Facebook-like distraction free mode
-    // })
-    // gitalk.render('container')
+    gitalk.render('container')
 </script>
             </div>
 
